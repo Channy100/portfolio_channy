@@ -1,0 +1,401 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family:'Poppings',sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: black;
+    color: white;
+}
+
+header{
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 3rem;
+    color: blue;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.logo:hover{
+    transform:scale(1.1);
+}
+
+nav a{
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3 ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active{
+    color: blue;
+    border-bottom: 3px solid blue;    
+}
+@media(max-width:995px){
+    nav{
+        position: absolute;
+        display: none;
+        top: 0;
+        right: 0;
+        width: 40%;
+        border-left: 3px solid blue;
+        border-bottom: 3px solid blue;
+        border-bottom-left-radius: 2rem;
+        padding: 1rem solid;
+        background-color: black;
+        border-top: 0.1rem solid rgba(0, 0, 0, 0.1)
+
+    }
+
+    nav.active{
+        display: block;
+    }
+
+    nav a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    nav a:hover,
+    nav a.active{
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid blue;
+    }
+}
+
+section{
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+}
+
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background-color:black;
+}
+
+.home .home-content h1{
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.home .home-content p{
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+span{
+    color: blue;
+}
+
+.home.home-content h3{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.home-img{
+    border-radius: 50%;
+}
+
+.home-img img{
+    position: relative;
+    width: 32vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px solid blue;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.home-img img:hover{
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.social-icon a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: 0.2rem solid blue;
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease;
+    color: blue;
+
+}
+
+.social-icon a:hover{
+    color: white;
+    transform: scale(1.3)translateY(-5px);
+    background-color: blue;
+    box-shadow: 0 0 25px blue;
+}
+
+.btn{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: black;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: blue;
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    border: 2px solid blue;
+    transition: 0.3 ease;
+    cursor: pointer ;
+}
+
+.btn:hover{
+    transform: scale3d(1.03);
+    background-color: blue;
+    color: black;
+    box-shadow:0 0 25px blue;
+}
+
+.typing-text{
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+.typing-text span{
+    position: relative;
+}
+
+.typing-text span::before{
+    content: "software Development";
+    color: blue;
+    animation: words 20s infinite;
+}
+
+.typing-text span::after{
+    content: "";
+    background-color: black;
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid black;
+    right: -8;
+    animation: cursor 0.6 infinite;
+}
+
+@keyframes cursor{
+    to{
+        border-left: 3px solid blue;
+    }
+
+}
+
+@keyframes words{
+    0%, 20%{
+        content:"Web Developer";
+    }
+    21%, 40%{
+        content:"Software Developer";
+    }
+
+    41%, 60%{
+       content: "Web Designer"; 
+    }
+
+    61%,80%{
+        content:"Handsome";
+    }
+
+    81%,100%{
+        content: "Super Handsome";
+    }
+}
+
+@media (max-width:995){
+    .home{
+        flex-direction: column;
+        margin: 5rem 4rem;
+    }
+
+    .home .home-contenth3{
+        font-size: 2.5rem;
+    }
+
+    .home-contenth1{
+        font-size: 5rem;
+    }
+
+    .home-img img{
+        width: 70vw;
+        margin-top: 4rem;
+    }
+}
+
+#skill {
+    width: 100%;
+    min-height: 100vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 12%;
+}
+
+.skill-content h2 {
+    color: white;
+    font-size: 42px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+
+.skill-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.container {
+    height: 300px;
+    width: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    border-radius: 40px;
+    padding: 60px;
+    border: 8px solid blue;
+    background-color: white;
+}
+
+.container p {
+    text-align: left;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.container h3 {
+    color: black;
+    font-size: 32px;
+}
+
+.container img {
+    width: 150px;
+}
+
+#portfolio {
+    width: 100%;
+    min-height: 100vh;
+    background-color: black;
+    padding: 90px 12%;
+}
+
+.portfolio-content h2 {
+    color: white;
+    font-size: 42px;
+    margin-bottom: 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.portfolio-content h3 {
+    color: blue;
+    font-size: 40px;
+    margin: 30px 0;
+}
+
+.logo-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.logo-container {
+    width: auto;
+    height: auto;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    transition: 0.3s ease;
+}
+
+.logo-container:hover {
+    color: blue;
+    box-shadow: 0 0 25px blue;
+    transform: scale(1.1);
+}
+
+.logo-container img {
+    width: 280px;
+}
+
+.package-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.package-container {
+    width: 450px;
+    height: auto;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    align-items: center;
+    border-radius: 40px;
+    transition: 0.3s ease;
+}
+
+.package-container img {
+    width: 240px;
+    height: auto;
+}
+
+
+
+
